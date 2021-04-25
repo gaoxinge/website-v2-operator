@@ -1,9 +1,6 @@
 package main
 
 import (
-	"context"
-	"fmt"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"log"
 
 	"k8s.io/client-go/kubernetes"
@@ -29,9 +26,6 @@ func main() {
 		log.Printf("new internal client set with error %v\n", err)
 		return
 	}
-
-	list, err := internalClientSet.ExtensionsV2().Websites("default").List(context.TODO(), metav1.ListOptions{})
-	fmt.Println(list, err)
 
 	controller := website.NewController(clientSet, internalClientSet)
 
