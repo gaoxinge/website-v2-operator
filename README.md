@@ -1,5 +1,10 @@
 # website v2 operator
 
+- [kubernetes/code-generator](https://github.com/kubernetes/code-generator)
+- [kubernetes/sample-controller](https://github.com/kubernetes/sample-controller)
+- [openshift-evangelists/crd-code-generation](https://github.com/openshift-evangelists/crd-code-generation)
+- [How to generate client codes for Kubernetes Custom Resource Definitions (CRD)](https://itnext.io/how-to-generate-client-codes-for-kubernetes-custom-resource-definitions-crd-b4b9907769ba)
+
 ## install
 
 ### base on git
