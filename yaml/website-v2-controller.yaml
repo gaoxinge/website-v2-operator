@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: website-v2-controller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: website-v2-controller
+  template:
+    metadata:
+      name: website-v2-controller
+      labels:
+        app: website-v2-controller
+    spec:
+      serviceAccountName: website-v2-controller
+      containers:
+        - name: main
+          image: gaoxinge/website-v2-controller
+        - name: proxy
+          image: luksa/kubectl-proxy:1.6.2

@@ -1,0 +1,6 @@
+apiVersion: extensions.example.com/v2
+kind: Website
+metadata:
+  name: kubia
+spec:
+  gitRepo: https://github.com.cnpmjs.org/luksa/kubia-website-example.git
