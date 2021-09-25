@@ -1,7 +1,6 @@
 package website
 
 import (
-	"fmt"
 	"time"
 
 	"github.com/pkg/errors"
@@ -42,7 +41,6 @@ func (controller *Controller) Run(stopCh chan  struct{}) error {
 }
 
 func (controller *Controller) add(obj interface{}) {
-	fmt.Println("11111111111111111111111111111111")
 	website := obj.(*internalExtensionV2.Website)
 	CreateDeployment(controller.clientSet, NewDeployment(website.Name, website.Namespace, website.Spec.GitRepo))
 	CreateService(controller.clientSet, NewService(website.Name, website.Namespace))
